@@ -30,7 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 From the angular cli website there are instructions to create a new  project
 
 
-##Module File:
+## Module File:
 	The declaration array will have all the components to be used  in the module
 	
 	The imports array will have the components that are used but not created by external parties
@@ -39,14 +39,14 @@ From the angular cli website there are instructions to create a new  project
 	
 	provider array will have all the services that can be injected in the components
 	
-##Component:
+## Component:
 	Need to pass a javascript object to it. It will have a three attributes
 	Value for Selector element will represent a tag in the index.html or in the component template file where the component will be rendered
 	
 	template value will  have the file that will be used by this component
 
 
-##Bindings:
+## Bindings:
 	Property bindings
 		user [] brackets to set value for a specific html tag atttribute to the value in the component
 		Example <button [disabled] = "Some value in the model"/>
@@ -61,7 +61,7 @@ From the angular cli website there are instructions to create a new  project
 		
 		To user two waybinding need to import FormsModule and set in the imports array in the module file
 
-##Directives:
+## Directives:
 	*ngFor
 	<div *ngFor="let product of products">{{product}}</div>
 	Here products is an array in the component
@@ -72,14 +72,14 @@ From the angular cli website there are instructions to create a new  project
 The component appear to rerender when there is a changge in the values of the attributes in the component
 
 
-##Passing values to components down:
+## Passing values to components down:
 	This very important. In the child component add a @Input() before the member variable declaration line this. This has to be imported from the @anular/core
 	like this @Input() productName:String
 	
 	In the parent component pass the value like this
 	<app-product [productName]="the value you need to pass. I can be a variable in the parent component"></app-product>
 	
-##Invoking action in the parent from the child component:
+## Invoking action in the parent from the child component:
 	Use @Output decotator as below
 	@Output() productClicked = new EventEmitter();
 	
